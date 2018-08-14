@@ -141,7 +141,7 @@
 }
 
 .portfolio-featured-wrapper:hover .portfolio-featured-overlay {  
-  background-color: rgba(51, 102, 153, .1)
+  background-color: rgba(51, 102, 153, .05)
 }
 
 
@@ -190,15 +190,20 @@
   right: 0;
   z-index: 2;
   background-color: rgba(51, 102, 153, .2);
+  transition-duration: .3s;
 }
 
 .portfolio-item-desc {
   color: #c5c5c5;
 }
 
-.portfolio-item:hover {
+.portfolio-item:not(.portfolio-featured):hover {
   text-decoration: none;
   color: inherit;
+}
+
+.portfolio-item:not(.portfolio-featured):hover .portfolio-item-overlay {
+  background-color: rgba(51, 102, 153, .05);
 }
 
 .portfolio-item-heading {
