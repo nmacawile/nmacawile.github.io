@@ -1,5 +1,7 @@
 #topbar {
   background-color: #336699;
+  transition: top 0.3s;
+  transition-delay: 0.1s;
 }
 
 #banner {

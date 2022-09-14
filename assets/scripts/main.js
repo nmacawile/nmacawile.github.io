@@ -57,6 +57,17 @@ const animateProgressBars = (function() {
   $(document).on("scroll", animate);
   // Animate when element is visible on reload regardless of scroll event
   animate();
-
-
 })();
+
+
+const topbar = document.getElementById('topbar');
+
+let previousY = window.pageYOffset;
+
+window.onscroll = function() {
+  const currentY = window.pageYOffset;
+  if (currentY > previousY)
+    topbar.style.top = '-60px';
+  else  topbar.style.top = 0;
+  previousY = currentY;
+}
